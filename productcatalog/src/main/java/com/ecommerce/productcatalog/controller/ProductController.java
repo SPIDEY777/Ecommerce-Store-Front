@@ -26,7 +26,7 @@ public class ProductController {
 
     @GetMapping("/category/{categoryId}")
     public List<Product> getAllProductsByCategory(@PathVariable Long categoryId) {
-        return productService.getAllProducts();
+        return productService.getProductsByCategory(categoryId);
     }
 
 }
