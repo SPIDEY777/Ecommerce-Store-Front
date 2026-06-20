@@ -13,7 +13,7 @@ function App() {
 
 
   return (
-    <div className = "container">
+    <div className = "container-fluid">
       <div>
         {products.length ?(
           <ProductList products={products}/>
