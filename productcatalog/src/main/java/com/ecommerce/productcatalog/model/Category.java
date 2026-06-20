@@ -1,4 +1,5 @@
 package com.ecommerce.productcatalog.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.*;
@@ -21,7 +22,7 @@ public class Category {
     @OneToMany(mappedBy = "category",
             cascade = CascadeType.ALL,
             fetch = FetchType.LAZY)
-    @JsonManagedReference
+    @JsonIgnore
     private Set<Product> products;
 
 }
